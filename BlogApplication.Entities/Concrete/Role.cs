@@ -1,0 +1,18 @@
+﻿using BlogApplication.Shared.Entities.Abstract;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BlogApplication.Entities.Concrete
+{
+   public class Role:EntityBase,IEntity
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public ICollection<User> Users { get; set; } // bir role bağlı olarak birden çok kullanıcı olabilir
+
+
+    }
+}
